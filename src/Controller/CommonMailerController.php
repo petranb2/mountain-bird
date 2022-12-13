@@ -13,9 +13,8 @@ class CommonMailerController extends AbstractController
     /**
      * @Route("/api/send-common-mail", methods={"GET"})
      */
-    public function sendMail(SendCommonMail $commonMail): Response
+    public function sendMail(SendCommonMail $commonMail): JsonResponse
     {
-        $commonMail->execute();
         return new JsonResponse(['data' => 'test']);
     }
 }
